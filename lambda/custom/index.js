@@ -9,7 +9,9 @@
  **/
 
 'use strict';
-const Alexa = require('alexa-sdk');
+const Alexa = require('alexa-sdk'),
+    pizza = require('pizzapi'),
+    chipsandguac = require('chipsandguac');
 
 //=========================================================================================================================================
 //TODO: The items below this comment need your attention.
@@ -17,9 +19,9 @@ const Alexa = require('alexa-sdk');
 
 //Replace with your app ID (OPTIONAL).  You can find this value at the top of your skill's page on http://developer.amazon.com.
 //Make sure to enclose your value in quotes, like this: const APP_ID = 'amzn1.ask.skill.bb4045e6-b3e8-4133-b650-72923c5980f1';
-const APP_ID = undefined;
+const APP_ID = 'amzn1.ask.skill.8eae40f1-2a45-434d-a0c7-4c84a581e5ec';
 
-const SKILL_NAME = 'Space Facts';
+const SKILL_NAME = 'Five O Clock';
 const GET_FACT_MESSAGE = "Here's your fact: ";
 const HELP_MESSAGE = 'You can say tell me a space fact, or, you can say exit... What can I help you with?';
 const HELP_REPROMPT = 'What can I help you with?';
